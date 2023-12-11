@@ -1,0 +1,35 @@
+/* Header.css */
+.header-container {
+  background-color: white;
+  /* Set the background color */
+  color: black;
+  /* Set the text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  /* Light-colored thin horizontal line */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.site-name {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.right-section {
+  display: flex;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
