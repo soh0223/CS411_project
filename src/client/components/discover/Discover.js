@@ -1,10 +1,17 @@
 // Discover.js
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Discoverstyle.css'
 
 function Discover() {
+  const navigate = useNavigate();
+
+  const handleSearchNow = () => {
+    // Redirect to the first question in the questionnaire
+    navigate('/questionnaire/1');
+  };
+
   return (
     <div className="discover-container">
       <header>
@@ -12,9 +19,7 @@ function Discover() {
       </header>
       <section>
         <p>Explore movies based on your preferences.</p>
-        <Link to="/questionnaire">
-          <button>Search Now</button>
-        </Link>
+        <button onClick={handleSearchNow}>Search Now</button>
       </section>
       <section>
         <h2>Instructions</h2>

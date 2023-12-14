@@ -8,6 +8,8 @@ import './client/styles/Layout.css'
 
 import Home from './client/components/home/Home';
 import Discover from './client/components/discover/Discover';
+import Questionnaire from './client/components/discover/Questionnaire';
+import MovieList from './client/components/discover/MovieList';
 
 // import Login from './client/components/auth/Login';
 
@@ -19,6 +21,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/questionnaire" element={<Questionnaire />} />
+            <Route path="/questionnaire/:questionNumber" element={<Questionnaire />} />
+            <Route path="/questionnaire/results" element={<MovieList />} />
             {/* <Route path="/login" element={<Login />} /> */}
             {/* Add other routes as needed */}
           </Routes>
