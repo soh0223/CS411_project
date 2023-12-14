@@ -15,9 +15,6 @@ function Header() {
         <Link to="/discover" className="header-link">
           Discover
         </Link>
-        <Link to="/history" className="header-link">
-          History
-        </Link>
         <Link to="/profile" className="header-link">
           Profile
         </Link>
