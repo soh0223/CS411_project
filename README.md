@@ -22,7 +22,6 @@ This application is designed to help users discover new content based on their p
 
 **Content Details**
 * Provide detailed information about recommended movies and shows (synopsis, cast, crew, trailers, reviews)
-* YouTube API for trailers
 
 **Decoupled Architecture**
 * Front-end: JavaScript
@@ -31,7 +30,6 @@ This application is designed to help users discover new content based on their p
 
 **API Integrations**
 * TMDb API: movie and show data (library)
-* YouTube API: trailers
 * Social Media APIs: user authentication
 (maybe add feature of nearby theaters showing recommended movies if available — need API)
 
