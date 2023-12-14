@@ -1,6 +1,7 @@
 // App.js
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 import Header from './client/components/common/Header';
 import Footer from './client/components/common/Footer';
@@ -8,6 +9,7 @@ import './client/styles/Layout.css'
 
 import Home from './client/components/home/Home';
 import Discover from './client/components/discover/Discover';
+import Profile from './client/components/profile/Profile';
 
 import Login from './client/components/auth/Login';
 import { GoogleLogin } from '@react-oauth/google'; //
@@ -40,6 +42,10 @@ function App() {
             <Route
               path="/logout"
               element={<LogoutButton onLoginStatusChange={handleLoginStatusChange} />}
+            />
+            <Route
+              path="/profile"
+              element={isLoggedIn ? <Profile /> : <Navigate to="/login" />}
             />
             {/* <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />

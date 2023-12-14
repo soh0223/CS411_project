@@ -3,8 +3,13 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const session = require('express-session');
 
-const app = express();
 
+// Start the server
+const app = express();
+const PORT = process.env.PORT || 3000; // 5000?
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 // Set up session
 app.use(
@@ -65,9 +70,3 @@ app.get('/logout', (req, res) => {
 });
 
 // Your other routes and middleware can go here
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
