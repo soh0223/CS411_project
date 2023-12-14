@@ -18,10 +18,19 @@ const Profile = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // You can send the formData to your backend or handle it as needed
-    console.log(formData);
+    // console.log(formData);
+
+    try {
+        const response = await axios.post('https://localhost:5000/register', formData);
+        console.log(response.data); // log the response from the server
+        // Add any logic you need for success (e.g., redirect user or show a success message)
+    } catch (error) {
+        console.error('Error saving profile:', error);
+        // Add logic to handle errors if needed
+    }
     // Add logic to update user profile information
   };
 
